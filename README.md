@@ -6,8 +6,9 @@ This repository is meant to contain scripts to assist customers moving from Nebu
 
 # Setup
   1. Use the command `git clone git@github.com:astronomer/cs-utility-nebula-to-astro.git` to clone this repo
-  2. Create a new file called `airflow-connections.yaml` using the command `touch airflow-connections.yaml`
-  3. Paste the following contents into the newly created `airflow-connections.yaml` file:
+  2. Use the command `cd cs-utility-nebula-to-astro` to change your working directory
+  3. Create a new file called `airflow-connections.yaml` using the command `touch airflow-connections.yaml`
+  4. Paste the following contents into the newly created `airflow-connections.yaml` file:
 
   ```yaml
   astro:
