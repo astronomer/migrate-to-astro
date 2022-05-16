@@ -6,7 +6,22 @@ This repository is meant to contain scripts to assist customers moving from Nebu
 
 # Setup
   1. Use the command `git clone git@github.com:astronomer/cs-utility-nebula-to-astro.git` to clone this repo
-  2. In the `airflow-connections.yaml` update variables to match your Nebula deployment and Astro deployment
+  2. Create a new file called `airflow-connections.yaml` using the command `touch airflow-connections.yaml`
+  3. Paste the following contents into the newly created `airflow-connections.yaml` file:
+
+  ```yaml
+  astro:
+    domain: '<INSERT DOMAIN HERE>'
+    key_id: '<INSERT KEY ID HERE>'
+    key_secret: '<INSERT KEY SECRET HERE>'
+
+  nebula:
+    api_key: '<INSERT API KEY HERE>'
+    base_domain: '<INSERT BASE DOMAIN HERE>'
+    deployment_release_name: '<INSERT DEPLOYMENT RELEASE NAME HERE>'
+  ```
+  
+  5. In the `airflow-connections.yaml` update variables to match your Nebula deployment and Astro deployment
  
   - Astro Domain: From the Astronomer UI in the Astro product, this is the URL of your deployment after clicking the `Open Airflow` button (be sure to remove `/home` from the end of the URL
   - Astro Key ID: From the Astronomer UI in the Astro product, this is found in the **API Keys** section of your deployment
