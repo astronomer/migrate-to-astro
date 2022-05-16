@@ -8,3 +8,6 @@ init: ## Generate airflow-connections.yaml file
 
 variables: ## Migrate variables from nebula to astro
 	$(PYTHON3) 'scripts/migrate-variables.py'
+
+connections: ## Migrate connections from nebula to astro
+	$(PYTHON3) 'scripts/migrate-connections.py'
