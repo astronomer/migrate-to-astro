@@ -1,9 +1,0 @@
-astro:
-  domain: '<INSERT DOMAIN HERE>'
-  key_id: '<INSERT KEY ID HERE>'
-  key_secret: '<INSERT KEY SECRET HERE>'
-
-nebula:
-  api_key: '<INSERT API KEY HERE>'
-  base_domain: '<INSERT BASE DOMAIN HERE>'
-  deployment_release_name: '<INSERT DEPLOYMENT RELEASE NAME HERE>'
