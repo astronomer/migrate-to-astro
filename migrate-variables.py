@@ -1,5 +1,6 @@
 import json
 import requests
+import yaml
 
 class nebulaClient():
     def __init__(self, api_key, base_domain, deployment_release_name):
@@ -59,24 +60,22 @@ class astroClient():
 
 
 if __name__ == '__main__':
-    nebula_api_key = input("Enter Nebula API Key: ")
-    nebula_base_domain = input("Enter Nebula Base Domain: ")
-    nebula_deployment_release_name = input("Enter Nebula Deployment Release Name: ")
-    astro_domain = input("Enter Astro Domain: ")
-    astro_key_id = input("Enter Astro Key ID: ")
-    astro_key_secret = input("Enter Astro Key Secret: ")
+    with open(r'airflow-connections.yaml') as file:
+        connections = yaml.safe_load(file)
+        astro = connections['astro']
+        nebula = connections['nebula']
 
     nebula = nebulaClient(
-        api_key=nebula_api_key,
-        base_domain=nebula_base_domain,
-        deployment_release_name=nebula_deployment_release_name
+        api_key=nebula['api_key'],
+        base_domain=nebula['base_domain'],
+        deployment_release_name=nebula['deployment_release_name']
     )
     variables = nebula.get_variables()
 
     astro = astroClient(
-        domain=astro_domain,
-        astro_key_id=astro_key_id,
-        astro_key_secret=astro_key_secret
+        domain=astro['domain'],
+        astro_key_id=astro['key_id'],
+        astro_key_secret=astro['key_secret']
     )
 
     for variable in variables:
