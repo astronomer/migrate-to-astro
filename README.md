@@ -32,4 +32,4 @@ This repository is meant to contain scripts to assist customers moving from Nebu
   - Nebula Deployment Release Name: From the Astronomer UI in the Nebula product, this is retrievable from the URL shown in your browser. Your URL will have the following format: `https://app.<BASE-DOMAIN>/w/<WORKSPACE-ID>/d/<DEPLOYMENT-RELEASE-NAME>`
 
 # Make Commands
-- After completing setup section above, use the `make migrate-variables` command to migrate all variables
+- After completing setup section above, use the `make variables` command to migrate all variables
