@@ -17,6 +17,22 @@ class astroClient():
         self.astro_key_id = astro['key_id']
         self.astro_key_secret = astro['key_secret']
 
+    def create_connection(self, conn_id, conn_type, host, login, schema, port, extra):
+        url = f"{self.domain}/api/v1/connections"
+        payload = json.dumps({
+            "connection_id": conn_id,
+            "conn_type": conn_type,
+            "host": host,
+            "login": login,
+            "schema": schema,
+            "port": port,
+            "password": "pa$$word",
+            "extra": extra
+        })
+        response = requests.post(url=url, headers=self._build_headers(), data=payload)
+        if response.status_code == 200:
+            print(f"Connection {conn_id} successfully migrated - please fill in password field manually")
+
     def create_variable(self, key, value):
         url = f'{self.domain}/api/v1/variables'
         payload = json.dumps({

@@ -28,7 +28,9 @@ class nebulaClient():
 
         print(conn_string)
 
-
+    def get_connection(self, conn_id):
+        response = requests.get(url=f"{self.domain}/connections/{conn_id}", headers=self.headers).json()
+        return response
 
     def list_connections(self):
         response = requests.get(url=f"{self.domain}/connections", headers=self.headers)
