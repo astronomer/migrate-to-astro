@@ -53,6 +53,11 @@ class astroClient():
         response = requests.post(url=url, headers=self._build_headers(), data=payload)
         if response.status_code == 200:
             print(f"Variable {response.json()['key']} succcessfully migrated")
+            
+    def list_providers(self):
+        url = f'{self.domain}/api/v1/providers'
+        response = requests.get(url=url, headers=self._build_headers()).json()
+        return response['providers']
 
     def _build_headers(self):
         authorized_headers = self.headers

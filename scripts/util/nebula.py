@@ -32,6 +32,10 @@ class nebulaClient():
         response = requests.get(url=f"{self.domain}/connections/{conn_id}", headers=self.headers).json()
         return response
 
+    def list_providers(self):
+        response = requests.get(url=f"{self.domain}/providers", headers=self.headers).json()
+        return response['providers']
+
     def list_pools(self):
         response = requests.get(url=f"{self.domain}/pools", headers=self.headers).json()
         return response['pools']

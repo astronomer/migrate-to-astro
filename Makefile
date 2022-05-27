@@ -14,3 +14,6 @@ connections: ## Migrate connections from nebula to astro
 
 pools: ## Migrate pools from nebula to astro
 	$(PYTHON3) 'scripts/migrate-pools.py'
+
+check-providers: ## Check provider differences
+	$(PYTHON3) 'scripts/check-providers.py'
