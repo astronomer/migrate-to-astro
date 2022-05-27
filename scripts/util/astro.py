@@ -17,6 +17,17 @@ class astroClient():
         self.astro_key_id = astro['key_id']
         self.astro_key_secret = astro['key_secret']
 
+    def create_pool(self, name, slots, description):
+        url = f"{self.domain}/api/v1/pools"
+        payload = json.dumps({
+            "name": name,
+            "slots": slots,
+            "description": description
+        })
+        response = requests.post(url=url, headers=self._build_headers(), data=payload)
+        if response.status_code == 200:
+            print(f"Pool {name} successfully migrated")
+
     def create_connection(self, conn_id, conn_type, host, login, schema, port, extra):
         url = f"{self.domain}/api/v1/connections"
         payload = json.dumps({

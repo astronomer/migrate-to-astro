@@ -11,3 +11,6 @@ variables: ## Migrate variables from nebula to astro
 
 connections: ## Migrate connections from nebula to astro
 	$(PYTHON3) 'scripts/migrate-connections.py'
+
+pools: ## Migrate pools from nebula to astro
+	$(PYTHON3) 'scripts/migrate-pools.py'
