@@ -18,4 +18,8 @@ This repository is meant to contain scripts to assist customers moving from Nebu
   - Nebula Deployment Release Name: From the Astronomer UI in the Nebula product, this is retrievable from the URL shown in your browser. Your URL will have the following format: `https://app.<BASE-DOMAIN>/w/<WORKSPACE-ID>/d/<DEPLOYMENT-RELEASE-NAME>`
 
 # Make Commands
-- After completing setup section above, use the `make variables` command to migrate all variables
+*After completing the setup section above, you may use the following make commands:*
+- Use the `make check-providers` command to view which providers are missing in your target environment
+- Use the `make connections` command to migrate all connections. **Please note that this does not migrate the password field. Each migrated connection will require manually adding the password field**
+- Use the `make pools` command to migrate all pools
+- Use the `make variables` command to migrate all variables
