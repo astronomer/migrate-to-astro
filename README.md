@@ -1,5 +1,5 @@
 # Overview
-This repository is meant to contain scripts to assist customers moving from Nebula to Astro. See usage instructions below
+This repository is meant to contain scripts to assist customers moving from Software/Nebula to Astro. See usage instructions below
 
 # Pre-requisites
 - Python 3
@@ -8,14 +8,14 @@ This repository is meant to contain scripts to assist customers moving from Nebu
   1. Use the command `git clone git@github.com:astronomer/cs-utility-nebula-to-astro.git` to clone this repo
   2. Use the command `cd cs-utility-nebula-to-astro` to change your working directory
   3. Run the `make init` command to generate the `airflow-connections.yaml` file
-  4. In the `airflow-connections.yaml` update variables to match your Nebula deployment and Astro deployment
+  4. In the `airflow-connections.yaml` update variables to match your Software/Nebula deployment and Astro deployment
  
   - Astro Domain: From the Astronomer UI in the Astro product, this is the URL of your deployment after clicking the `Open Airflow` button (be sure to remove `/home` from the end of the URL
   - Astro Key ID: From the Astronomer UI in the Astro product, this is found in the **API Keys** section of your deployment
   - Astro Key Secret: From the Astronomer UI in the Astro product, this is found in the **API Keys** section of your deployment
-  - Nebula API Key: From the Astronomer UI in the Nebula product, this is found under the **Service Accounts** section
-  - Nebula Base Domain: From the Astronomer UI in the Nebula product, this is retrievable from the URL shown in your browser. Your URL will have the following format: `https://app.<BASE-DOMAIN>/w/<WORKSPACE-ID>/d/<DEPLOYMENT-RELEASE-NAME>`
-  - Nebula Deployment Release Name: From the Astronomer UI in the Nebula product, this is retrievable from the URL shown in your browser. Your URL will have the following format: `https://app.<BASE-DOMAIN>/w/<WORKSPACE-ID>/d/<DEPLOYMENT-RELEASE-NAME>`
+  - Software/Nebula API Key: From the Astronomer UI in the Software/Nebula product, this is found under the **Service Accounts** section
+  - Software/Nebula Base Domain: From the Astronomer UI in the Software/Nebula product, this is retrievable from the URL shown in your browser. Your URL will have the following format: `https://app.<BASE-DOMAIN>/w/<WORKSPACE-ID>/d/<DEPLOYMENT-RELEASE-NAME>`, you'll only need the <BASE-DOMAIN> piece.
+  - Software/Nebula Deployment Release Name: From the Astronomer UI in the Software/Nebula product, this is retrievable from the URL shown in your browser. Your URL will have the following format: `https://app.<BASE-DOMAIN>/w/<WORKSPACE-ID>/d/<DEPLOYMENT-RELEASE-NAME>`,  you'll only need the <RELEASE-NAME> piece.
 
 # Make Commands
 *After completing the setup section above, you may use the following make commands:*
