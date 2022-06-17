@@ -28,7 +28,7 @@ class astroClient():
         if response.status_code == 200:
             print(f"Pool {name} successfully migrated")
 
-    def create_connection(self, conn_id, conn_type, host, login, schema, port, extra):
+    def create_connection(self, conn_id, conn_type, host, login, schema, port, extra,description):
         url = f"{self.domain}/api/v1/connections"
         payload = json.dumps({
             "connection_id": conn_id,
@@ -38,7 +38,8 @@ class astroClient():
             "schema": schema,
             "port": port,
             "password": "pa$$word",
-            "extra": extra
+            "extra": extra,
+            "description": description
         })
         response = requests.post(url=url, headers=self._build_headers(), data=payload)
         if response.status_code == 200:

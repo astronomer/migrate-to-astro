@@ -14,5 +14,6 @@ if __name__ == '__main__':
             login=src_conn["login"],
             schema=src_conn["schema"],
             port=src_conn["port"],
-            extra=src_conn["extra"]
+            extra=src_conn["extra"],
+            description=src_conn["description"]
         )
