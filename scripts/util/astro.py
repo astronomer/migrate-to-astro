@@ -17,7 +17,7 @@ class astroClient():
         self.astro_key_id = astro['key_id']
         self.astro_key_secret = astro['key_secret']
 
-    def create_pool(self, name, slots, description):
+    def create_pool(self, name, slots, description=None):
         url = f"{self.domain}/api/v1/pools"
         payload = json.dumps({
             "name": name,
