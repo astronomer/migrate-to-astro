@@ -5,8 +5,8 @@ This repository is meant to contain scripts to assist customers moving from Soft
 - Python 3
 
 # Setup
-  1. Use the command `git clone git@github.com:astronomer/cs-utility-nebula-to-astro.git` to clone this repo
-  2. Use the command `cd cs-utility-nebula-to-astro` to change your working directory
+  1. Use the command `git clone git@github.com:astronomer/migrate-to-astro.git` to clone this repo
+  2. Use the command `cd migrate-to-astro` to change your working directory
   3. Run the `make init` command to generate the `airflow-connections.yaml` file
   4. In the `airflow-connections.yaml` update variables to match your Software/Nebula deployment and Astro deployment
  
