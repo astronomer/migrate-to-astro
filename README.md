@@ -13,7 +13,7 @@ This repository is meant to contain scripts to assist customers moving from Soft
   - Astro Domain: From the Astronomer UI in the Astro product, this is the URL of your deployment after clicking the `Open Airflow` button (be sure to remove `/home` from the end of the URL
   - Astro Key ID: From the Astronomer UI in the Astro product, this is found in the **API Keys** section of your deployment
   - Astro Key Secret: From the Astronomer UI in the Astro product, this is found in the **API Keys** section of your deployment
-  - Software/Nebula API Key: From the Astronomer UI in the Software/Nebula product, this is found under the **Service Accounts** section
+  - Software/Nebula API Key: From the Astronomer UI in the Software/Nebula product, this is found under the **Service Accounts** section. Please note that your service account will need `Deployment Admin` permissions in order for this utility to work properly.
   - Software/Nebula Base Domain: From the Astronomer UI in the Software/Nebula product, this is retrievable from the URL shown in your browser. Your URL will have the following format: `https://app.<BASE-DOMAIN>/w/<WORKSPACE-ID>/d/<DEPLOYMENT-RELEASE-NAME>`, you'll only need the <BASE-DOMAIN> piece.
   - Software/Nebula Deployment Release Name: From the Astronomer UI in the Software/Nebula product, this is retrievable from the URL shown in your browser. Your URL will have the following format: `https://app.<BASE-DOMAIN>/w/<WORKSPACE-ID>/d/<DEPLOYMENT-RELEASE-NAME>`,  you'll only need the <RELEASE-NAME> piece.
 
