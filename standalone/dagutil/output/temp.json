@@ -1,0 +1,161 @@
+{
+  "dags": [
+    {
+      "dag_id": "astronomer_monitoring_dag",
+      "default_view": "grid",
+      "description": "A Monitoring DAG used by Astronomer to alert users via Control Plane when tasks aren't executing",
+      "file_token": ".eJxT0i8tLtLPyU9OzNFPzCxKy8kv109JTC_WTywuKcrPy89NLYpH5-fm52WW5Bdl5qWDpPQKKpUAtLwbMA.ui1tEOhuIVWn1K81bAeJdhmsc2U",
+      "fileloc": "/usr/local/airflow/dags/astronomer_dags/astronomer_monitoring_dag.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": false,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2022-07-08T15:20:51.955073+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "next_dagrun": "2022-07-08T15:20:00+00:00",
+      "next_dagrun_create_after": "2022-07-08T15:25:00+00:00",
+      "next_dagrun_data_interval_end": "2022-07-08T15:25:00+00:00",
+      "next_dagrun_data_interval_start": "2022-07-08T15:20:00+00:00",
+      "owners": [
+        "airflow"
+      ],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "*/5 * * * *"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "monitoring"
+        }
+      ],
+      "timetable_description": "Every 5 minutes"
+    },
+    {
+      "dag_id": "example_dag_advanced",
+      "default_view": "graph",
+      "description": null,
+      "file_token": "Ii91c3IvbG9jYWwvYWlyZmxvdy9kYWdzL2V4YW1wbGUtZGFnLWFkdmFuY2VkLnB5Ig.MZM2_PlH8mO9NlkHbC8ftBLX8L8",
+      "fileloc": "/usr/local/airflow/dags/example-dag-advanced.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": false,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2022-07-08T15:20:51.967313+00:00",
+      "last_pickled": null,
+      "max_active_runs": 1,
+      "max_active_tasks": 16,
+      "next_dagrun": "2022-07-08T00:00:00+00:00",
+      "next_dagrun_create_after": "2022-07-09T00:00:00+00:00",
+      "next_dagrun_data_interval_end": "2022-07-09T00:00:00+00:00",
+      "next_dagrun_data_interval_start": "2022-07-08T00:00:00+00:00",
+      "owners": [
+        "community"
+      ],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "@daily"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "example"
+        }
+      ],
+      "timetable_description": "At 00:00"
+    },
+    {
+      "dag_id": "example_dag_basic",
+      "default_view": "grid",
+      "description": null,
+      "file_token": "Ii91c3IvbG9jYWwvYWlyZmxvdy9kYWdzL2V4YW1wbGUtZGFnLWJhc2ljLnB5Ig.dFefjjD8PvhHZm99Ts3aidsUGLU",
+      "fileloc": "/usr/local/airflow/dags/example-dag-basic.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": false,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2022-07-08T15:21:21.264923+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "next_dagrun": "2022-07-08T00:00:00+00:00",
+      "next_dagrun_create_after": "2022-07-09T00:00:00+00:00",
+      "next_dagrun_data_interval_end": "2022-07-09T00:00:00+00:00",
+      "next_dagrun_data_interval_start": "2022-07-08T00:00:00+00:00",
+      "owners": [
+        "airflow"
+      ],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "@daily"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "example"
+        },
+        {
+          "name": "data_science"
+        }
+      ],
+      "timetable_description": "At 00:00"
+    },
+    {
+      "dag_id": "my_dag",
+      "default_view": "grid",
+      "description": "this is a sample dag for processing customer data",
+      "file_token": "Ii91c3IvbG9jYWwvYWlyZmxvdy9kYWdzL215X2RhZy5weSI.edd8RMEjGQ5xLOI1PVHXncYsQrc",
+      "fileloc": "/usr/local/airflow/dags/my_dag.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": false,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2022-07-08T15:21:21.261523+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "next_dagrun": "2022-07-08T15:18:11.344787+00:00",
+      "next_dagrun_create_after": "2022-07-08T15:28:11.344787+00:00",
+      "next_dagrun_data_interval_end": "2022-07-08T15:28:11.344787+00:00",
+      "next_dagrun_data_interval_start": "2022-07-08T15:18:11.344787+00:00",
+      "owners": [
+        "airflow"
+      ],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "TimeDelta",
+        "days": 0,
+        "microseconds": 0,
+        "seconds": 600
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "data_science"
+        },
+        {
+          "name": "Example"
+        }
+      ],
+      "timetable_description": ""
+    }
+  ],
+  "total_entries": 4
+}

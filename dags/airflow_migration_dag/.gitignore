@@ -1,0 +1,5 @@
+.git
+.env
+airflow_settings.yaml
+pod-config.yml
+key_file.json
