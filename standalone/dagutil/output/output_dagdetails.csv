@@ -1,0 +1,5 @@
+DAGID,DESCRIPTION,IS_PAUSED,TAGS
+astronomer_monitoring_dag,A Monitoring DAG used by Astronomer to alert users via Control Plane when tasks aren't executing,False,monitoring
+example_dag_advanced,,False,example
+example_dag_basic,,False,"example,data_science"
+my_dag,this is a sample dag for processing customer data,False,"data_science,Example"
