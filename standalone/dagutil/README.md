@@ -1,6 +1,6 @@
 # Overview
 This repository is meant to contain scripts to assist customers to 
-- Get Dag Details - Output includes dag_id, description, pause status, and tags
+- Get Dag Details - Gets total Number of Dags in the Deployment and then for those Dags CSV output includes dag_id, description, pause status, and tags
 - Pause/Unpause Dags in Software and Astro by providing a list of dag_id's as input
 
 See usage instructions below
@@ -25,12 +25,13 @@ See usage instructions below
   - Software Deployment Release Name: From the Astronomer UI in the Software product, this is retrievable from the URL shown in your browser. Your URL will have the following format: `https://app.<BASE-DOMAIN>/w/<WORKSPACE-ID>/d/<DEPLOYMENT-RELEASE-NAME>`,  you'll only need the <RELEASE-NAME> piece.
 
 # Execution Commands
-*After completing the setup section above, you may use the following make commands:*
+*After completing the setup section above, you may use the following commands to execute Utility:*
 
 1. Get List of Dags for a Deployment
 - Use the `python3 getdaglist.py <target>` command to execute the utility to get list of dags including Dag's Description, Pause Status and Tag list
     - target: Accepted Values Software or Astro
 - Once executed CSV file (output_dagdetails.csv) is generated in the `/output` folder having the details of the DAG
+- Getting the Dag list is limited to 100 DAG_ID's i.e. API default.
 
 2. Pause/Unpause List of Dags in a Deployment
 - Use the `python3 dagstate.py <target> <action> <daglist>` command to execute the utility to pause/unpause Dag's

@@ -76,9 +76,9 @@ class astroClient():
             print(" EXCEPTION: Got Exception while performing the pause/unpause action")
             print(str(e))
 
-    def list_dags(self):
+    def list_dags(self,daglimit,dagoffset):
             
-            url = f'{self.domain}/api/v1/dags'
+            url = f'{self.domain}/api/v1/dags?limit={daglimit}&offset={dagoffset}'
             response = requests.get(url=url, headers=self._build_headers())
             
             if response.status_code == 200:

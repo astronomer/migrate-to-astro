@@ -49,9 +49,9 @@ class softwareClient():
 
         return status
 
-    def list_dags(self):
+    def list_dags(self,daglimit,dagoffset):
 
-            url = f"{self.domain}/dags"
+            url = f"{self.domain}/dags?limit={daglimit}&offset={dagoffset}"
         
             response = requests.get(url=url, headers=self.headers)
                 
