@@ -9,8 +9,8 @@ See usage instructions below
 - Python 3
 
 # Setup
-  1. Use the command 'https://github.com/iamakashladdha/dagutil.git' to clone this repo
-  2. Use the command `cd dagutil` to change your working directory
+  1. Use the command 'https://github.com/astronomer/migrate-to-astro.git' to clone this repo
+  2. Use the command `cd migrate-to-astro/standalone/dagutil/` to change your working directory
   3. Run the `python3 init-connections.py` command to generate the `airflow-connections.yaml` file
   4. In the `airflow-connections.yaml` update variables to match your target i.e. Software deployment and Astro deployments
  
