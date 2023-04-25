@@ -15,6 +15,7 @@ from airflow.models import Variable
 def migrate_conns(**kwargs):
     """
     migrate_conns
+    {"dry_run": true}
     """
     dry_run = False
     if 'dry_run' in kwargs['dag_run'].conf.keys():
@@ -28,8 +29,7 @@ def migrate_conns(**kwargs):
         for c in connections
     ]
     for conn in conn_list:
-        if dry_run == False:
-            formatted_conn = {
+        formatted_conn = {
                         "connection_id": conn[3],
                         "conn_type": conn[4],
                         "host": conn[5],
@@ -39,6 +39,7 @@ def migrate_conns(**kwargs):
                         "password": conn[0] if conn[0] else "",
                         "extra": str(conn[1])
                     }
+        if dry_run == False:
             url = Variable.get("ASTRO_URL")
             token = Variable.get("ASTRO_ACCESS_KEY")
             headers = {'Content-type': 'application/json', 'Authorization': f'Bearer {token}', 'Accept': 'application/json'}
@@ -46,9 +47,9 @@ def migrate_conns(**kwargs):
             print(conn[3])
             print(r.text)
         else:
-            print(f'connection_id: {conn[3]} host: {conn[5]} login: {conn[7]}')
+            print(formatted_conn)
 
-    print(f'{conn_list=}')
+    print(conn_list)
 
 with DAG(
     dag_id="migrate_conns",
@@ -56,8 +57,10 @@ with DAG(
     start_date=datetime(2022, 1, 1),
     catchup=False,
     tags=["migration"],
-):
+) as dag:
     astro_auth_task = PythonOperator(
         task_id="migrate_conns",
         python_callable=migrate_conns,
+        provide_context=True,
+        dag=dag
     )
